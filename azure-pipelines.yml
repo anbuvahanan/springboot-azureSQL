@@ -9,13 +9,13 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'bd4d1a75-592c-420c-b6a8-2917128019da'
+  azureSubscription: 'd675274b-4dfb-4a5a-a468-849927a0fe2c'
 
   # Web app name
-  webAppName: 'MyfirstSpringWebApp'
+  webAppName: 'springboot-azuresqlpoc'
 
   # Environment name
-  environmentName: 'MyfirstSpringWebApp'
+  environmentName: 'springboot-azuresqlpoc'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -60,7 +60,7 @@ stages:
         deploy:
           steps:
           - task: AzureWebApp@1
-            displayName: 'Azure Web App Deploy: MyfirstSpringWebApp'
+            displayName: 'Azure Web App Deploy: springboot-azuresqlpoc'
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
